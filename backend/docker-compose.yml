@@ -1,0 +1,14 @@
+version: '3.3'
+
+services: 
+  api:
+    build: .
+    container_name: chatbot_api 
+    restart: always
+    environment: 
+      - API_HOST=0.0.0.0
+      - API_PORT=3001
+      - API_DEBUG=False
+    ports: 
+      - "3001:3001"
+    command: gunicorn -w 4 -b 0.0.0.0:3001 run:app
