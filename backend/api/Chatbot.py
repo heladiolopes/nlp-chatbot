@@ -17,7 +17,7 @@ from tensorflow.keras.models import load_model
 
 # Definições iniciais
 assets_path = os.path.join(os.path.dirname(__file__), 'assets/')  # Diretório de assets
-nlp = spacy.load('en_core_web_md')  # Spacy parser
+nlp = spacy.load('pt_core_news_md')  # Spacy parser
 intents = json.load(open(os.path.join(assets_path, 'data.json'), 'r'))  # Arquivo de dados
 vocabulary = pickle.load(open(os.path.join(assets_path, 'vocabulary.pkl'), 'rb'))  # Palavras do vocabulário
 labels = pickle.load(open(os.path.join(assets_path, 'labels.pkl'), 'rb'))  # Intenções / tipo de perguntas
@@ -82,4 +82,4 @@ class Chatbot(Resource):
                 if i['tag'] == tag:
                     return random.choice(i['responses'])
         else:
-            return "Sorry! I don't understand that question!"
+            return "Desculpe! Não entendi essa pergunta!"

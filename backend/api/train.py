@@ -16,7 +16,7 @@ import os
 
 # Definições iniciais
 assets_path = os.path.join(os.path.dirname(__file__), 'assets/')  # Diretório de assets
-nlp = spacy.load('en_core_web_md')  # Spacy parser
+nlp = spacy.load('pt_core_news_md')  # Spacy parser
 intents = json.load(open(os.path.join(assets_path, 'data.json'), 'r'))  # Arquivo de dados
 
 # Tratando arquivo de dados
