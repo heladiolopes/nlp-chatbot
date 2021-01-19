@@ -56,15 +56,15 @@ y = np.array([np.array(t[1]) for t in training])
 
 # Treinamento da rede neural
 model = Sequential()
-model.add(Dense(128, input_shape=(len(X[0]),), activation='relu'))
-model.add(Dropout(0.75))
-model.add(Dense(64, activation='relu'))
-model.add(Dropout(0.75))
+model.add(Dense(64, input_shape=(len(X[0]),), activation='relu'))
+model.add(Dropout(0.5))
+model.add(Dense(32, activation='relu'))
+model.add(Dropout(0.5))
 model.add(Dense(len(y[0]), activation='softmax'))
 
 sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 model.summary()
 
-hist = model.fit(X, y, epochs=200, batch_size=5, verbose=True, validation_split=0.2)
+hist = model.fit(X, y, epochs=200, batch_size=5, verbose=True)
 model.save(os.path.join(assets_path, 'chatbot.h5'), hist)
