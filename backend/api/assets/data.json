@@ -1,0 +1,54 @@
+{
+    "intents": [
+        {
+            "tag": "saudacao",
+            "patterns": ["Oi", "Olá", "Oi tudo bem?", "Tem alguem ai?", "Pode me ajudar"],
+            "responses": ["Oi tudo bem e voce?", "Ola, como posso te ajudar?", "Oi, como podemos te ajudar?"]
+        },
+        {
+            "tag": "identidada",
+            "patterns": ["Quem é você?", "Como você se chama?", "Como posso te chamar?", "Qual o seu nome?"],
+            "responses": ["Sou o assistente virtual da pizzaria!", "Me chame de assistente da pizza, vou anotar seu pedido!"]
+        },
+        {
+            "tag": "despedida",
+            "patterns": ["Tchau", "Até mais", "Abracos", "Até logo"],
+            "responses": ["Até mais, obrigado pelo contato!", "Tenha um otimo dia!", "Até, um abraço."]
+        },
+        {
+            "tag": "agradecimento",
+            "patterns": ["Obrigado", "Obrigado pela ajuda", "Muito obrigado", "Voce me ajudou"],
+            "responses": ["De nada!", "Fico feliz em ajudar!", "Disponha"]
+        },
+        {
+            "tag": "horario",
+            "patterns": ["Que horas abre a loja?", "Voce abrem que horas?", "Qual o horario de funcionamento?", "Que horas vocês estam abertos"],
+            "responses": ["Nosso horario e das 08h as 22h", "Estamos aberto das 08h as 22h"]
+        },
+        {
+            "tag": "produto",
+            "patterns": ["O que voces vendem?", "Qual o seu produto?", "O que esta a venda?"],
+            "responses": ["Nos trabalhamos com a producao de pizza artesanal.", "Pizza artesanais!"]
+        },
+        {
+            "tag": "pagamento",
+            "patterns": ["Quais os meios de pagamento?", "Como faço para pagar? "],
+            "responses": ["Aceitamos dinheiro ou cartão!", "Pode pagar em espécie ou em cartão."]
+        },
+        {
+            "tag": "cartao",
+            "patterns": ["Voces aceitam cartao de credito?", "Aceita Mastercard?", "Posso pagar com cartao?"],
+            "responses": ["Nos aceitamos VISA, Mastercard e AMEX", "Sim aceitamos cartoes de credito"]
+        },
+        {
+            "tag": "cardapio",
+            "patterns": ["Quais os sabores de pizza?", "Pode me mandar o cardapio?", "Quais os sabores"],
+            "responses": ["Temos pizzas de Calabresa, Queijo e Mexicana"]
+        },
+        {
+            "tag": "pedido",
+            "patterns": ["Quero uma pizza de Calabresa", "Me vê metade calabresa e meia queijo", "Uma pizza mexicana por favor."],
+            "responses": ["Já estamos preparando o seu pedido!", "Anotado! Fica pronto em 30 min!"]
+        }
+    ]
+}
