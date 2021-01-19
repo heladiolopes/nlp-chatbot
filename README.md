@@ -40,3 +40,8 @@ Para executar a aplciação cliente é necessário ter o python com a biblioteca
 $ pip3 install requests
 $ python3 client.py
 ```
+
+## Exemplo
+A seguir há um exemplo de iteração com o bot.
+
+![Exemplo de conversa](exemplo.png)
