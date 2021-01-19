@@ -7,6 +7,7 @@ import numpy as np
 import random
 import pickle
 import json
+import time
 import os
 
 import spacy
@@ -36,6 +37,9 @@ class Chatbot(Resource):
         return response
 
     def post(self):
+        # Delay
+        time.sleep(1)
+
         # Identificar argumento 'message'
         parser = reqparse.RequestParser()
         parser.add_argument('message', required=True, location='json')
